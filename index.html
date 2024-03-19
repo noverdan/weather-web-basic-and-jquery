@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Current Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h4>Current.Weather</h4>
+      </div>
+    </header>
+    <main class="card">
+      <svg
+        fill="none"
+        viewBox="0 0 342 175"
+        height="175"
+        width="342"
+        xmlns="http://www.w3.org/2000/svg"
+        class="background"
+      >
+        <path
+          fill="url(#paint0_linear_103_640)"
+          d="M0 66.4396C0 31.6455 0 14.2484 11.326 5.24044C22.6519 -3.76754 39.6026 0.147978 73.5041 7.97901L307.903 62.1238C324.259 65.9018 332.436 67.7909 337.218 73.8031C342 79.8154 342 88.2086 342 104.995V131C342 151.742 342 162.113 335.556 168.556C329.113 175 318.742 175 298 175H44C23.2582 175 12.8873 175 6.44365 168.556C0 162.113 0 151.742 0 131V66.4396Z"
+        ></path>
+        <defs>
+          <linearGradient
+            gradientUnits="userSpaceOnUse"
+            y2="128"
+            x2="354.142"
+            y1="128"
+            x1="0"
+            id="paint0_linear_103_640"
+          >
+            <stop stop-color="#5936B4"></stop>
+            <stop stop-color="#362A84" offset="1"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="cloud">
+        <img
+          class="img-cloud"
+          src="https://cdn.weatherapi.com/weather/64x64/day/116.png"
+          alt="icon"
+          width="120"
+        />
+      </div>
+      <p class="main-text">
+        <span class="temp_c"></span><span style="font-size: large">°C</span>
+      </p>
+      <div class="info">
+        <div class="info-left">
+          <p class="text-gray humidity">Humidity: 80</p>
+          <p class="location">Jakarta, Indonesia</p>
+        </div>
+        <p class="info-right text-info">Partly cloudy</p>
+      </div>
+      <p
+        class="time"
+        style="color: #362a84a1; font-size: small; margin-left: auto"
+      >
+        00-00-0000 00:00 Localtime
+      </p>
+    </main>
+    <section class="input-city">
+      <input
+        type="text"
+        placeholder="Your Location or City..."
+        name="text"
+        class="input"
+      />
+      <button id="submit">Submit</button>
+    </section>
+
+    <section id="loading">
+      <div class="loading-wave">
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+      </div>
+    </section>
+
+    <section id="msg-error">
+      <div class="error">
+        <div class="error__icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            viewBox="0 0 24 24"
+            height="24"
+            fill="none"
+          >
+            <path
+              fill="#393a37"
+              d="m13 13h-2v-6h2zm0 4h-2v-2h2zm-1-15c-1.3132 0-2.61358.25866-3.82683.7612-1.21326.50255-2.31565 1.23915-3.24424 2.16773-1.87536 1.87537-2.92893 4.41891-2.92893 7.07107 0 2.6522 1.05357 5.1957 2.92893 7.0711.92859.9286 2.03098 1.6651 3.24424 2.1677 1.21325.5025 2.51363.7612 3.82683.7612 2.6522 0 5.1957-1.0536 7.0711-2.9289 1.8753-1.8754 2.9289-4.4189 2.9289-7.0711 0-1.3132-.2587-2.61358-.7612-3.82683-.5026-1.21326-1.2391-2.31565-2.1677-3.24424-.9286-.92858-2.031-1.66518-3.2443-2.16773-1.2132-.50254-2.5136-.7612-3.8268-.7612z"
+            ></path>
+          </svg>
+        </div>
+        <div class="error__title">Error</div>
+        <div class="error__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            viewBox="0 0 20 20"
+            height="20"
+          >
+            <path
+              fill="#393a37"
+              d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <p>Credit:</p>
+        <ul>
+          <li>WeatherApi.com</li>
+          <li>Sahil Khadka</li>
+          <li>andrew-demchenk0</li>
+        </ul>
+      </div>
+      <div>
+        <p>© 2024 Galang Arsandy</p>
+      </div>
+    </footer>
+  </body>
+</html>
